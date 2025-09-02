@@ -1,5 +1,6 @@
 package com.yash.learning.hospitalmanagement.entity;
 
+import com.yash.learning.hospitalmanagement.type.BloodGroupEnum;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -28,4 +29,7 @@ public class Patient {
     @CreationTimestamp
     @Column(updatable = false)
     private LocalDateTime createdAt;
+
+    @Enumerated(EnumType.STRING)
+    private BloodGroupEnum bloodGroup;
 }
